@@ -1,0 +1,1289 @@
+{
+  "@context": {
+    "schema": "https://schema.org/",
+    "prov": "http://www.w3.org/ns/prov#"
+  },
+  "@type": "prov:Entity",
+  "schema:name": "guide-to-pharmacology validation report",
+  "prov:generatedAtTime": "2026-07-15T16:59:24Z",
+  "bb:validator": "tools/bb_validate.py",
+  "bb:verdict": "WARN",
+  "bb:summary": {
+    "n_parquet_files": 11,
+    "total_rows": 89359,
+    "total_bytes": 9048710,
+    "note": ""
+  },
+  "bb:deterministic_checks": [
+    {
+      "file": "GtP_to_HGNC_mapping.parquet",
+      "path": "/mnt/raid2/biobricks/guide-to-pharmacology/brick/GtP_to_HGNC_mapping.parquet",
+      "rows": 3798,
+      "cols": 5,
+      "bytes": 152226,
+      "columns": [
+        {
+          "name": "hgnc_symbol",
+          "type": "string"
+        },
+        {
+          "name": "hgnc_id",
+          "type": "string"
+        },
+        {
+          "name": "iuphar_name",
+          "type": "string"
+        },
+        {
+          "name": "iuphar_id",
+          "type": "int64"
+        },
+        {
+          "name": "gtp_url",
+          "type": "string"
+        }
+      ],
+      "null_fraction": {
+        "hgnc_symbol": 0.0,
+        "hgnc_id": 0.0,
+        "iuphar_name": 0.0,
+        "iuphar_id": 0.0,
+        "gtp_url": 0.0
+      },
+      "all_null_columns": [],
+      "sample_rows": 3798,
+      "sample_dup_fraction": 0.0,
+      "sample_constant_columns": [],
+      "warnings": [],
+      "status": "PASS"
+    },
+    {
+      "file": "GtP_to_UniProt_mapping.parquet",
+      "path": "/mnt/raid2/biobricks/guide-to-pharmacology/brick/GtP_to_UniProt_mapping.parquet",
+      "rows": 7901,
+      "cols": 5,
+      "bytes": 173798,
+      "columns": [
+        {
+          "name": "uniprotkb_id",
+          "type": "string"
+        },
+        {
+          "name": "species",
+          "type": "string"
+        },
+        {
+          "name": "gtopdb_iuphar_name",
+          "type": "string"
+        },
+        {
+          "name": "gtopdb_iuphar_id",
+          "type": "int64"
+        },
+        {
+          "name": "gtp_url",
+          "type": "string"
+        }
+      ],
+      "null_fraction": {
+        "uniprotkb_id": 0.0,
+        "species": 0.0,
+        "gtopdb_iuphar_name": 0.0,
+        "gtopdb_iuphar_id": 0.0,
+        "gtp_url": 0.0
+      },
+      "all_null_columns": [],
+      "sample_rows": 7901,
+      "sample_dup_fraction": 0.0,
+      "sample_constant_columns": [],
+      "warnings": [],
+      "status": "PASS"
+    },
+    {
+      "file": "approved_drug_detailed_interactions.parquet",
+      "path": "/mnt/raid2/biobricks/guide-to-pharmacology/brick/approved_drug_detailed_interactions.parquet",
+      "rows": 4714,
+      "cols": 16,
+      "bytes": 830685,
+      "columns": [
+        {
+          "name": "ligand",
+          "type": "string"
+        },
+        {
+          "name": "ligand_id",
+          "type": "int64"
+        },
+        {
+          "name": "type",
+          "type": "string"
+        },
+        {
+          "name": "ligand_synonyms",
+          "type": "string"
+        },
+        {
+          "name": "smiles",
+          "type": "string"
+        },
+        {
+          "name": "cas_number",
+          "type": "string"
+        },
+        {
+          "name": "clinical_use_comment",
+          "type": "string"
+        },
+        {
+          "name": "bioactivity_comment",
+          "type": "string"
+        },
+        {
+          "name": "target",
+          "type": "string"
+        },
+        {
+          "name": "target_id",
+          "type": "int64"
+        },
+        {
+          "name": "target_entrez_gene_id",
+          "type": "string"
+        },
+        {
+          "name": "target_ensembl_gene_id",
+          "type": "string"
+        },
+        {
+          "name": "target_gene_name",
+          "type": "string"
+        },
+        {
+          "name": "target_ligand",
+          "type": "string"
+        },
+        {
+          "name": "target_ligand_id",
+          "type": "int64"
+        },
+        {
+          "name": "target_species",
+          "type": "string"
+        }
+      ],
+      "null_fraction": {
+        "ligand": 0.0,
+        "ligand_id": 0.0,
+        "type": 0.0,
+        "ligand_synonyms": 0.0,
+        "smiles": 0.0,
+        "cas_number": 0.0,
+        "clinical_use_comment": 0.0,
+        "bioactivity_comment": 0.0,
+        "target": 0.0,
+        "target_id": 0.0,
+        "target_entrez_gene_id": 0.0,
+        "target_ensembl_gene_id": 0.0,
+        "target_gene_name": 0.0,
+        "target_ligand": 0.0,
+        "target_ligand_id": 0.0,
+        "target_species": 0.0
+      },
+      "all_null_columns": [],
+      "sample_rows": 4714,
+      "sample_dup_fraction": 0.0,
+      "sample_constant_columns": [],
+      "smiles_column": "smiles",
+      "smiles_valid_fraction_sampled": 0.996,
+      "smiles_sampled": 2000,
+      "warnings": [],
+      "status": "PASS"
+    },
+    {
+      "file": "approved_drug_primary_target_interactions.parquet",
+      "path": "/mnt/raid2/biobricks/guide-to-pharmacology/brick/approved_drug_primary_target_interactions.parquet",
+      "rows": 1229,
+      "cols": 8,
+      "bytes": 31372,
+      "columns": [
+        {
+          "name": "ligand",
+          "type": "string"
+        },
+        {
+          "name": "ligand_id",
+          "type": "int64"
+        },
+        {
+          "name": "target",
+          "type": "string"
+        },
+        {
+          "name": "target_id",
+          "type": "int64"
+        },
+        {
+          "name": "target_ligand",
+          "type": "string"
+        },
+        {
+          "name": "target_ligand_id",
+          "type": "int64"
+        },
+        {
+          "name": "target_species",
+          "type": "string"
+        },
+        {
+          "name": "type",
+          "type": "string"
+        }
+      ],
+      "null_fraction": {
+        "ligand": 0.0,
+        "ligand_id": 0.0,
+        "target": 0.0,
+        "target_id": 0.0,
+        "target_ligand": 0.0,
+        "target_ligand_id": 0.0,
+        "target_species": 0.0,
+        "type": 0.0
+      },
+      "all_null_columns": [],
+      "sample_rows": 1229,
+      "sample_dup_fraction": 0.0016,
+      "sample_constant_columns": [],
+      "warnings": [],
+      "status": "PASS"
+    },
+    {
+      "file": "endogenous_ligand_pairings_all.parquet",
+      "path": "/mnt/raid2/biobricks/guide-to-pharmacology/brick/endogenous_ligand_pairings_all.parquet",
+      "rows": 2420,
+      "cols": 22,
+      "bytes": 97241,
+      "columns": [
+        {
+          "name": "ligand_id",
+          "type": "int64"
+        },
+        {
+          "name": "ligand_name",
+          "type": "string"
+        },
+        {
+          "name": "ligand_type",
+          "type": "string"
+        },
+        {
+          "name": "ligand_species",
+          "type": "string"
+        },
+        {
+          "name": "ligand_uniprot_id",
+          "type": "string"
+        },
+        {
+          "name": "ligand_ensembl_gene_id",
+          "type": "string"
+        },
+        {
+          "name": "ligand_subunit_id",
+          "type": "string"
+        },
+        {
+          "name": "ligand_subunit_name",
+          "type": "string"
+        },
+        {
+          "name": "ligand_subunit_uniprot_id",
+          "type": "string"
+        },
+        {
+          "name": "ligand_subunit_ensembl_id",
+          "type": "string"
+        },
+        {
+          "name": "target_id",
+          "type": "int64"
+        },
+        {
+          "name": "target_name",
+          "type": "string"
+        },
+        {
+          "name": "target_species",
+          "type": "string"
+        },
+        {
+          "name": "target_uniprot_id",
+          "type": "string"
+        },
+        {
+          "name": "target_ensembl_gene_id",
+          "type": "string"
+        },
+        {
+          "name": "target_subunit_id",
+          "type": "string"
+        },
+        {
+          "name": "target_subunit_name",
+          "type": "string"
+        },
+        {
+          "name": "target_subunit_uniprot_id",
+          "type": "string"
+        },
+        {
+          "name": "target_subunit_ensembl_id",
+          "type": "string"
+        },
+        {
+          "name": "rank_potency",
+          "type": "string"
+        },
+        {
+          "name": "rank_potency_refs(pmids)",
+          "type": "string"
+        },
+        {
+          "name": "list_comment",
+          "type": "string"
+        }
+      ],
+      "null_fraction": {
+        "ligand_id": 0.0,
+        "ligand_name": 0.0,
+        "ligand_type": 0.0,
+        "ligand_species": 0.0,
+        "ligand_uniprot_id": 0.0,
+        "ligand_ensembl_gene_id": 0.0,
+        "ligand_subunit_id": 0.0,
+        "ligand_subunit_name": 0.0,
+        "ligand_subunit_uniprot_id": 0.0,
+        "ligand_subunit_ensembl_id": 0.0,
+        "target_id": 0.0,
+        "target_name": 0.0,
+        "target_species": 0.0,
+        "target_uniprot_id": 0.0,
+        "target_ensembl_gene_id": 0.0,
+        "target_subunit_id": 0.0,
+        "target_subunit_name": 0.0,
+        "target_subunit_uniprot_id": 0.0,
+        "target_subunit_ensembl_id": 0.0,
+        "rank_potency": 0.0,
+        "rank_potency_refs(pmids)": 0.0,
+        "list_comment": 0.0
+      },
+      "all_null_columns": [],
+      "sample_rows": 2420,
+      "sample_dup_fraction": 0.0,
+      "sample_constant_columns": [],
+      "warnings": [],
+      "status": "PASS"
+    },
+    {
+      "file": "interactions.parquet",
+      "path": "/mnt/raid2/biobricks/guide-to-pharmacology/brick/interactions.parquet",
+      "rows": 24599,
+      "cols": 44,
+      "bytes": 986627,
+      "columns": [
+        {
+          "name": "target",
+          "type": "string"
+        },
+        {
+          "name": "target_id",
+          "type": "double"
+        },
+        {
+          "name": "target_subunit_ids",
+          "type": "string"
+        },
+        {
+          "name": "target_gene_symbol",
+          "type": "string"
+        },
+        {
+          "name": "target_uniprot_id",
+          "type": "string"
+        },
+        {
+          "name": "target_ensembl_gene_id",
+          "type": "string"
+        },
+        {
+          "name": "target_ligand",
+          "type": "string"
+        },
+        {
+          "name": "target_ligand_id",
+          "type": "double"
+        },
+        {
+          "name": "target_ligand_subunit_ids",
+          "type": "string"
+        },
+        {
+          "name": "target_ligand_gene_symbol",
+          "type": "string"
+        },
+        {
+          "name": "target_ligand_uniprot_id",
+          "type": "string"
+        },
+        {
+          "name": "target_ligand_ensembl_gene_id",
+          "type": "string"
+        },
+        {
+          "name": "target_ligand_pubchem_sid",
+          "type": "double"
+        },
+        {
+          "name": "target_species",
+          "type": "string"
+        },
+        {
+          "name": "ligand_id",
+          "type": "int64"
+        },
+        {
+          "name": "ligand",
+          "type": "string"
+        },
+        {
+          "name": "ligand_type",
+          "type": "string"
+        },
+        {
+          "name": "ligand_subunit_ids",
+          "type": "string"
+        },
+        {
+          "name": "ligand_gene_symbol",
+          "type": "string"
+        },
+        {
+          "name": "ligand_species",
+          "type": "string"
+        },
+        {
+          "name": "ligand_pubchem_sid",
+          "type": "double"
+        },
+        {
+          "name": "approved",
+          "type": "bool"
+        },
+        {
+          "name": "type",
+          "type": "string"
+        },
+        {
+          "name": "action",
+          "type": "string"
+        },
+        {
+          "name": "action_comment",
+          "type": "string"
+        },
+        {
+          "name": "selectivity",
+          "type": "string"
+        },
+        {
+          "name": "endogenous",
+          "type": "bool"
+        },
+        {
+          "name": "primary_target",
+          "type": "bool"
+        },
+        {
+          "name": "concentration_range",
+          "type": "string"
+        },
+        {
+          "name": "affinity_units",
+          "type": "string"
+        },
+        {
+          "name": "affinity_high",
+          "type": "double"
+        },
+        {
+          "name": "affinity_median",
+          "type": "double"
+        },
+        {
+          "name": "affinity_low",
+          "type": "double"
+        },
+        {
+          "name": "original_affinity_units",
+          "type": "string"
+        },
+        {
+          "name": "original_affinity_low_nm",
+          "type": "double"
+        },
+        {
+          "name": "original_affinity_median_nm",
+          "type": "double"
+        },
+        {
+          "name": "original_affinity_high_nm",
+          "type": "double"
+        },
+        {
+          "name": "original_affinity_relation",
+          "type": "string"
+        },
+        {
+          "name": "assay_description",
+          "type": "string"
+        },
+        {
+          "name": "receptor_site",
+          "type": "string"
+        },
+        {
+          "name": "ligand_context",
+          "type": "string"
+        },
+        {
+          "name": "pubmed_id",
+          "type": "string"
+        },
+        {
+          "name": "webpage_urls",
+          "type": "string"
+        },
+        {
+          "name": "patent_numbers",
+          "type": "string"
+        }
+      ],
+      "null_fraction": {
+        "target": 0.0,
+        "target_id": 0.022928,
+        "target_subunit_ids": 0.0,
+        "target_gene_symbol": 0.0,
+        "target_uniprot_id": 0.0,
+        "target_ensembl_gene_id": 0.0,
+        "target_ligand": 0.0,
+        "target_ligand_id": 0.987479,
+        "target_ligand_subunit_ids": 0.0,
+        "target_ligand_gene_symbol": 0.0,
+        "target_ligand_uniprot_id": 0.0,
+        "target_ligand_ensembl_gene_id": 0.0,
+        "target_ligand_pubchem_sid": 0.987479,
+        "target_species": 0.0,
+        "ligand_id": 0.0,
+        "ligand": 0.0,
+        "ligand_type": 0.0,
+        "ligand_subunit_ids": 0.0,
+        "ligand_gene_symbol": 0.0,
+        "ligand_species": 0.0,
+        "ligand_pubchem_sid": 0.005447,
+        "approved": 0.0,
+        "type": 0.0,
+        "action": 0.0,
+        "action_comment": 0.0,
+        "selectivity": 0.0,
+        "endogenous": 0.0,
+        "primary_target": 0.0,
+        "concentration_range": 0.0,
+        "affinity_units": 0.0,
+        "affinity_high": 0.884629,
+        "affinity_median": 0.222326,
+        "affinity_low": 0.884629,
+        "original_affinity_units": 0.0,
+        "original_affinity_low_nm": 0.961868,
+        "original_affinity_median_nm": 0.432091,
+        "original_affinity_high_nm": 0.961868,
+        "original_affinity_relation": 0.0,
+        "assay_description": 0.0,
+        "receptor_site": 0.0,
+        "ligand_context": 0.0,
+        "pubmed_id": 0.0,
+        "webpage_urls": 0.0,
+        "patent_numbers": 0.0
+      },
+      "all_null_columns": [],
+      "sample_rows": 24599,
+      "sample_dup_fraction": 0.0002,
+      "sample_constant_columns": [],
+      "warnings": [],
+      "status": "PASS"
+    },
+    {
+      "file": "ligand_id_mapping.parquet",
+      "path": "/mnt/raid2/biobricks/guide-to-pharmacology/brick/ligand_id_mapping.parquet",
+      "rows": 13856,
+      "cols": 15,
+      "bytes": 1175640,
+      "columns": [
+        {
+          "name": "ligand_id",
+          "type": "int64"
+        },
+        {
+          "name": "name",
+          "type": "string"
+        },
+        {
+          "name": "species",
+          "type": "string"
+        },
+        {
+          "name": "type",
+          "type": "string"
+        },
+        {
+          "name": "pubchem_sid",
+          "type": "double"
+        },
+        {
+          "name": "pubchem_cid",
+          "type": "double"
+        },
+        {
+          "name": "chembl_id",
+          "type": "string"
+        },
+        {
+          "name": "chebi_id",
+          "type": "string"
+        },
+        {
+          "name": "uniprot_id",
+          "type": "string"
+        },
+        {
+          "name": "ensembl_id",
+          "type": "string"
+        },
+        {
+          "name": "iupac_name",
+          "type": "string"
+        },
+        {
+          "name": "inn",
+          "type": "string"
+        },
+        {
+          "name": "cas",
+          "type": "string"
+        },
+        {
+          "name": "drugbank_id",
+          "type": "string"
+        },
+        {
+          "name": "drug_central_id",
+          "type": "double"
+        }
+      ],
+      "null_fraction": {
+        "ligand_id": 0.0,
+        "name": 0.0,
+        "species": 0.0,
+        "type": 0.0,
+        "pubchem_sid": 0.00931,
+        "pubchem_cid": 0.171045,
+        "chembl_id": 0.0,
+        "chebi_id": 0.0,
+        "uniprot_id": 0.0,
+        "ensembl_id": 0.0,
+        "iupac_name": 0.0,
+        "inn": 0.0,
+        "cas": 0.0,
+        "drugbank_id": 0.0,
+        "drug_central_id": 0.873917
+      },
+      "all_null_columns": [],
+      "sample_rows": 13856,
+      "sample_dup_fraction": 0.0,
+      "sample_constant_columns": [],
+      "warnings": [],
+      "status": "PASS"
+    },
+    {
+      "file": "ligand_physchem_properties.parquet",
+      "path": "/mnt/raid2/biobricks/guide-to-pharmacology/brick/ligand_physchem_properties.parquet",
+      "rows": 11151,
+      "cols": 9,
+      "bytes": 445184,
+      "columns": [
+        {
+          "name": "ligand_id",
+          "type": "int64"
+        },
+        {
+          "name": "ligand_name",
+          "type": "string"
+        },
+        {
+          "name": "hbond_acceptors",
+          "type": "int64"
+        },
+        {
+          "name": "hbond_donors",
+          "type": "int64"
+        },
+        {
+          "name": "rotatable_bonds",
+          "type": "int64"
+        },
+        {
+          "name": "tpsa",
+          "type": "double"
+        },
+        {
+          "name": "mol_weight",
+          "type": "double"
+        },
+        {
+          "name": "xlogp",
+          "type": "double"
+        },
+        {
+          "name": "lipinskiro5",
+          "type": "int64"
+        }
+      ],
+      "null_fraction": {
+        "ligand_id": 0.0,
+        "ligand_name": 0.0,
+        "hbond_acceptors": 0.0,
+        "hbond_donors": 0.0,
+        "rotatable_bonds": 0.0,
+        "tpsa": 0.0,
+        "mol_weight": 0.0,
+        "xlogp": 0.0,
+        "lipinskiro5": 0.0
+      },
+      "all_null_columns": [],
+      "sample_rows": 11151,
+      "sample_dup_fraction": 0.0,
+      "sample_constant_columns": [],
+      "warnings": [],
+      "status": "PASS"
+    },
+    {
+      "file": "ligands.parquet",
+      "path": "/mnt/raid2/biobricks/guide-to-pharmacology/brick/ligands.parquet",
+      "rows": 13856,
+      "cols": 26,
+      "bytes": 3529202,
+      "columns": [
+        {
+          "name": "ligand_id",
+          "type": "int64"
+        },
+        {
+          "name": "name",
+          "type": "string"
+        },
+        {
+          "name": "species",
+          "type": "string"
+        },
+        {
+          "name": "type",
+          "type": "string"
+        },
+        {
+          "name": "approved",
+          "type": "string"
+        },
+        {
+          "name": "withdrawn",
+          "type": "string"
+        },
+        {
+          "name": "labelled",
+          "type": "string"
+        },
+        {
+          "name": "radioactive",
+          "type": "string"
+        },
+        {
+          "name": "pubchem_sid",
+          "type": "double"
+        },
+        {
+          "name": "pubchem_cid",
+          "type": "double"
+        },
+        {
+          "name": "uniprot_id",
+          "type": "string"
+        },
+        {
+          "name": "ensembl_id",
+          "type": "string"
+        },
+        {
+          "name": "chembl_id",
+          "type": "string"
+        },
+        {
+          "name": "ligand_subunit_ids",
+          "type": "string"
+        },
+        {
+          "name": "ligand_subunit_name",
+          "type": "string"
+        },
+        {
+          "name": "ligand_subunit_uniprot_ids",
+          "type": "string"
+        },
+        {
+          "name": "ligand_subunit_ensembl_ids",
+          "type": "string"
+        },
+        {
+          "name": "iupac_name",
+          "type": "string"
+        },
+        {
+          "name": "inn",
+          "type": "string"
+        },
+        {
+          "name": "synonyms",
+          "type": "string"
+        },
+        {
+          "name": "smiles",
+          "type": "string"
+        },
+        {
+          "name": "inchikey",
+          "type": "string"
+        },
+        {
+          "name": "inchi",
+          "type": "string"
+        },
+        {
+          "name": "gtoimmupdb",
+          "type": "string"
+        },
+        {
+          "name": "gtompdb",
+          "type": "string"
+        },
+        {
+          "name": "antibacterial",
+          "type": "string"
+        }
+      ],
+      "null_fraction": {
+        "ligand_id": 0.0,
+        "name": 0.0,
+        "species": 0.0,
+        "type": 0.0,
+        "approved": 0.0,
+        "withdrawn": 0.0,
+        "labelled": 0.0,
+        "radioactive": 0.0,
+        "pubchem_sid": 0.00931,
+        "pubchem_cid": 0.171045,
+        "uniprot_id": 0.0,
+        "ensembl_id": 0.0,
+        "chembl_id": 0.0,
+        "ligand_subunit_ids": 0.0,
+        "ligand_subunit_name": 0.0,
+        "ligand_subunit_uniprot_ids": 0.0,
+        "ligand_subunit_ensembl_ids": 0.0,
+        "iupac_name": 0.0,
+        "inn": 0.0,
+        "synonyms": 0.0,
+        "smiles": 0.0,
+        "inchikey": 0.0,
+        "inchi": 0.0,
+        "gtoimmupdb": 0.0,
+        "gtompdb": 0.0,
+        "antibacterial": 0.0
+      },
+      "all_null_columns": [],
+      "sample_rows": 13856,
+      "sample_dup_fraction": 0.0,
+      "sample_constant_columns": [],
+      "smiles_column": "smiles",
+      "smiles_valid_fraction_sampled": 0.849,
+      "smiles_sampled": 2000,
+      "warnings": [
+        "SMILES validity 84.90% < 95% (col smiles)"
+      ],
+      "status": "WARN"
+    },
+    {
+      "file": "peptides.parquet",
+      "path": "/mnt/raid2/biobricks/guide-to-pharmacology/brick/peptides.parquet",
+      "rows": 2452,
+      "cols": 26,
+      "bytes": 804284,
+      "columns": [
+        {
+          "name": "ligand_id",
+          "type": "int64"
+        },
+        {
+          "name": "name",
+          "type": "string"
+        },
+        {
+          "name": "species",
+          "type": "string"
+        },
+        {
+          "name": "type",
+          "type": "string"
+        },
+        {
+          "name": "subunit_ids",
+          "type": "string"
+        },
+        {
+          "name": "subunit_names",
+          "type": "string"
+        },
+        {
+          "name": "approved",
+          "type": "string"
+        },
+        {
+          "name": "withdrawn",
+          "type": "string"
+        },
+        {
+          "name": "labelled",
+          "type": "string"
+        },
+        {
+          "name": "radioactive",
+          "type": "string"
+        },
+        {
+          "name": "pubchem_sid",
+          "type": "double"
+        },
+        {
+          "name": "pubchem_cid",
+          "type": "double"
+        },
+        {
+          "name": "uniprot_id",
+          "type": "string"
+        },
+        {
+          "name": "ensembl_id",
+          "type": "string"
+        },
+        {
+          "name": "chembl_id",
+          "type": "string"
+        },
+        {
+          "name": "subunit_uniprot_ids",
+          "type": "string"
+        },
+        {
+          "name": "subunit_ensembl_ids",
+          "type": "string"
+        },
+        {
+          "name": "inn",
+          "type": "string"
+        },
+        {
+          "name": "single_letter_amino_acid_sequence",
+          "type": "string"
+        },
+        {
+          "name": "three_letter_amino_acid_sequence",
+          "type": "string"
+        },
+        {
+          "name": "helm",
+          "type": "string"
+        },
+        {
+          "name": "post_translational_modification",
+          "type": "string"
+        },
+        {
+          "name": "chemical_modification",
+          "type": "string"
+        },
+        {
+          "name": "smiles",
+          "type": "string"
+        },
+        {
+          "name": "inchikey",
+          "type": "string"
+        },
+        {
+          "name": "inchi",
+          "type": "string"
+        }
+      ],
+      "null_fraction": {
+        "ligand_id": 0.0,
+        "name": 0.0,
+        "species": 0.0,
+        "type": 0.0,
+        "subunit_ids": 0.0,
+        "subunit_names": 0.0,
+        "approved": 0.0,
+        "withdrawn": 0.0,
+        "labelled": 0.0,
+        "radioactive": 0.0,
+        "pubchem_sid": 0.007749,
+        "pubchem_cid": 0.722675,
+        "uniprot_id": 0.0,
+        "ensembl_id": 0.0,
+        "chembl_id": 0.0,
+        "subunit_uniprot_ids": 0.0,
+        "subunit_ensembl_ids": 0.0,
+        "inn": 0.0,
+        "single_letter_amino_acid_sequence": 0.0,
+        "three_letter_amino_acid_sequence": 0.0,
+        "helm": 0.0,
+        "post_translational_modification": 0.0,
+        "chemical_modification": 0.0,
+        "smiles": 0.0,
+        "inchikey": 0.0,
+        "inchi": 0.0
+      },
+      "all_null_columns": [],
+      "sample_rows": 2452,
+      "sample_dup_fraction": 0.0,
+      "sample_constant_columns": [],
+      "smiles_column": "smiles",
+      "smiles_valid_fraction_sampled": 0.2515,
+      "smiles_sampled": 2000,
+      "warnings": [
+        "SMILES validity 25.15% < 95% (col smiles)"
+      ],
+      "status": "WARN"
+    },
+    {
+      "file": "targets_and_families.parquet",
+      "path": "/mnt/raid2/biobricks/guide-to-pharmacology/brick/targets_and_families.parquet",
+      "rows": 3383,
+      "cols": 37,
+      "bytes": 822451,
+      "columns": [
+        {
+          "name": "type",
+          "type": "string"
+        },
+        {
+          "name": "family_id",
+          "type": "int64"
+        },
+        {
+          "name": "family_name",
+          "type": "string"
+        },
+        {
+          "name": "target_id",
+          "type": "int64"
+        },
+        {
+          "name": "target_name",
+          "type": "string"
+        },
+        {
+          "name": "subunit_id",
+          "type": "string"
+        },
+        {
+          "name": "subunit_name",
+          "type": "string"
+        },
+        {
+          "name": "target_systematic_name",
+          "type": "string"
+        },
+        {
+          "name": "target_abbreviated_name",
+          "type": "string"
+        },
+        {
+          "name": "synonyms",
+          "type": "string"
+        },
+        {
+          "name": "hgnc_id",
+          "type": "string"
+        },
+        {
+          "name": "hgnc_symbol",
+          "type": "string"
+        },
+        {
+          "name": "hgnc_name",
+          "type": "string"
+        },
+        {
+          "name": "human_genetic_localisation",
+          "type": "string"
+        },
+        {
+          "name": "human_nucleotide_refseq",
+          "type": "string"
+        },
+        {
+          "name": "human_protein_refseq",
+          "type": "string"
+        },
+        {
+          "name": "human_swissprot",
+          "type": "string"
+        },
+        {
+          "name": "human_entrez_gene",
+          "type": "string"
+        },
+        {
+          "name": "human_ensembl_gene",
+          "type": "string"
+        },
+        {
+          "name": "rgd_id",
+          "type": "string"
+        },
+        {
+          "name": "rgd_symbol",
+          "type": "string"
+        },
+        {
+          "name": "rgd_name",
+          "type": "string"
+        },
+        {
+          "name": "rat_genetic_localisation",
+          "type": "string"
+        },
+        {
+          "name": "rat_nucleotide_refseq",
+          "type": "string"
+        },
+        {
+          "name": "rat_protein_refseq",
+          "type": "string"
+        },
+        {
+          "name": "rat_swissprot",
+          "type": "string"
+        },
+        {
+          "name": "rat_entrez_gene",
+          "type": "string"
+        },
+        {
+          "name": "rat_ensembl_gene",
+          "type": "string"
+        },
+        {
+          "name": "mgi_id",
+          "type": "string"
+        },
+        {
+          "name": "mgi_symbol",
+          "type": "string"
+        },
+        {
+          "name": "mgi_name",
+          "type": "string"
+        },
+        {
+          "name": "mouse_genetic_localisation",
+          "type": "string"
+        },
+        {
+          "name": "mouse_nucleotide_refseq",
+          "type": "string"
+        },
+        {
+          "name": "mouse_protein_refseq",
+          "type": "string"
+        },
+        {
+          "name": "mouse_swissprot",
+          "type": "string"
+        },
+        {
+          "name": "mouse_entrez_gene",
+          "type": "string"
+        },
+        {
+          "name": "mouse_ensembl_gene",
+          "type": "string"
+        }
+      ],
+      "null_fraction": {
+        "type": 0.0,
+        "family_id": 0.0,
+        "family_name": 0.0,
+        "target_id": 0.0,
+        "target_name": 0.0,
+        "subunit_id": 0.0,
+        "subunit_name": 0.0,
+        "target_systematic_name": 0.0,
+        "target_abbreviated_name": 0.0,
+        "synonyms": 0.0,
+        "hgnc_id": 0.0,
+        "hgnc_symbol": 0.0,
+        "hgnc_name": 0.0,
+        "human_genetic_localisation": 0.0,
+        "human_nucleotide_refseq": 0.0,
+        "human_protein_refseq": 0.0,
+        "human_swissprot": 0.0,
+        "human_entrez_gene": 0.0,
+        "human_ensembl_gene": 0.0,
+        "rgd_id": 0.0,
+        "rgd_symbol": 0.0,
+        "rgd_name": 0.0,
+        "rat_genetic_localisation": 0.0,
+        "rat_nucleotide_refseq": 0.0,
+        "rat_protein_refseq": 0.0,
+        "rat_swissprot": 0.0,
+        "rat_entrez_gene": 0.0,
+        "rat_ensembl_gene": 0.0,
+        "mgi_id": 0.0,
+        "mgi_symbol": 0.0,
+        "mgi_name": 0.0,
+        "mouse_genetic_localisation": 0.0,
+        "mouse_nucleotide_refseq": 0.0,
+        "mouse_protein_refseq": 0.0,
+        "mouse_swissprot": 0.0,
+        "mouse_entrez_gene": 0.0,
+        "mouse_ensembl_gene": 0.0
+      },
+      "all_null_columns": [],
+      "sample_rows": 3383,
+      "sample_dup_fraction": 0.0,
+      "sample_constant_columns": [],
+      "warnings": [],
+      "status": "PASS"
+    }
+  ],
+  "bb:datapackage_conformance": {
+    "issues": [],
+    "conforms": true
+  },
+  "bb:web_validation": null
+}

@@ -5,21 +5,21 @@ stages:
     deps:
     - path: stages/01_download.py
       hash: md5
-      md5: 9f9b8f670a72718f263544fd28dccb4a
+      md5: 87434591d03e7db83ea6896d335b4d5c
       size: 1478
     outs:
     - path: download
       hash: md5
-      md5: 8d42565895e5c2e8bc5a41afca3d20c3.dir
-      size: 26590091
+      md5: 53a18dcaa7f7d669c24aa64d91c3422a.dir
+      size: 27121555
       nfiles: 11
   build:
     cmd: .venv/bin/python stages/02_build.py
     deps:
     - path: download
       hash: md5
-      md5: 8d42565895e5c2e8bc5a41afca3d20c3.dir
-      size: 26590091
+      md5: 53a18dcaa7f7d669c24aa64d91c3422a.dir
+      size: 27121555
       nfiles: 11
     - path: stages/02_build.py
       hash: md5
@@ -28,6 +28,6 @@ stages:
     outs:
     - path: brick
       hash: md5
-      md5: 2db0fa9bbb21696f6c778b0eed0ea608.dir
-      size: 8851031
+      md5: 054b38d42fde57a1e78662b7f305ae69.dir
+      size: 9048710
       nfiles: 11

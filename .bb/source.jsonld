@@ -26,6 +26,6 @@
     "@id": "https://www.guidetopharmacology.org/",
     "dcterms:title": "IUPHAR/BPS Guide to PHARMACOLOGY",
     "dcat:downloadURL": "https://www.guidetopharmacology.org/download.jsp",
-    "dcterms:version": "2025.4"
+    "dcterms:version": "2026.2"
   }
 }

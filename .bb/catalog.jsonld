@@ -1,0 +1,120 @@
+{
+  "@context": {
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "dcterms": "http://purl.org/dc/terms/",
+    "prov": "http://www.w3.org/ns/prov#",
+    "schema": "https://schema.org/",
+    "bb": "https://brickyard.biobricks.ai/ns#",
+    "csvw": "http://www.w3.org/ns/csvw#"
+  },
+  "@type": "dcat:Catalog",
+  "@id": "https://brickyard.biobricks.ai/brick/guide-to-pharmacology",
+  "dcterms:title": "guide-to-pharmacology catalog",
+  "dcterms:description": "Aggregator brick modeled as a DCAT Catalog: 11 datasets (11 distributions / 89,359 rows). Each dcat:Dataset is a source record with its own manifest at brick/<record>/dataset.jsonld and one dcat:Distribution per parquet table.",
+  "prov:generatedAtTime": "2026-07-06T00:00:00Z",
+  "bb:generator": "tools/bb_catalog_manifest.py",
+  "bb:n_datasets": 11,
+  "bb:n_distributions": 11,
+  "bb:n_rows": 89359,
+  "dcat:dataset": [
+    {
+      "@type": "dcat:Dataset",
+      "@id": "urn:bb:guide-to-pharmacology:GtP_to_HGNC_mapping",
+      "dcterms:identifier": "GtP_to_HGNC_mapping",
+      "dcterms:title": "GtP_to_HGNC_mapping",
+      "bb:n_tables": 1,
+      "bb:n_rows": 3798,
+      "bb:manifest": "brick/GtP_to_HGNC_mapping.dataset.jsonld"
+    },
+    {
+      "@type": "dcat:Dataset",
+      "@id": "urn:bb:guide-to-pharmacology:GtP_to_UniProt_mapping",
+      "dcterms:identifier": "GtP_to_UniProt_mapping",
+      "dcterms:title": "GtP_to_UniProt_mapping",
+      "bb:n_tables": 1,
+      "bb:n_rows": 7901,
+      "bb:manifest": "brick/GtP_to_UniProt_mapping.dataset.jsonld"
+    },
+    {
+      "@type": "dcat:Dataset",
+      "@id": "urn:bb:guide-to-pharmacology:approved_drug_detailed_interactions",
+      "dcterms:identifier": "approved_drug_detailed_interactions",
+      "dcterms:title": "approved_drug_detailed_interactions",
+      "bb:n_tables": 1,
+      "bb:n_rows": 4714,
+      "bb:manifest": "brick/approved_drug_detailed_interactions.dataset.jsonld"
+    },
+    {
+      "@type": "dcat:Dataset",
+      "@id": "urn:bb:guide-to-pharmacology:approved_drug_primary_target_interactions",
+      "dcterms:identifier": "approved_drug_primary_target_interactions",
+      "dcterms:title": "approved_drug_primary_target_interactions",
+      "bb:n_tables": 1,
+      "bb:n_rows": 1229,
+      "bb:manifest": "brick/approved_drug_primary_target_interactions.dataset.jsonld"
+    },
+    {
+      "@type": "dcat:Dataset",
+      "@id": "urn:bb:guide-to-pharmacology:endogenous_ligand_pairings_all",
+      "dcterms:identifier": "endogenous_ligand_pairings_all",
+      "dcterms:title": "endogenous_ligand_pairings_all",
+      "bb:n_tables": 1,
+      "bb:n_rows": 2420,
+      "bb:manifest": "brick/endogenous_ligand_pairings_all.dataset.jsonld"
+    },
+    {
+      "@type": "dcat:Dataset",
+      "@id": "urn:bb:guide-to-pharmacology:interactions",
+      "dcterms:identifier": "interactions",
+      "dcterms:title": "interactions",
+      "bb:n_tables": 1,
+      "bb:n_rows": 24599,
+      "bb:manifest": "brick/interactions.dataset.jsonld"
+    },
+    {
+      "@type": "dcat:Dataset",
+      "@id": "urn:bb:guide-to-pharmacology:ligand_id_mapping",
+      "dcterms:identifier": "ligand_id_mapping",
+      "dcterms:title": "ligand_id_mapping",
+      "bb:n_tables": 1,
+      "bb:n_rows": 13856,
+      "bb:manifest": "brick/ligand_id_mapping.dataset.jsonld"
+    },
+    {
+      "@type": "dcat:Dataset",
+      "@id": "urn:bb:guide-to-pharmacology:ligand_physchem_properties",
+      "dcterms:identifier": "ligand_physchem_properties",
+      "dcterms:title": "ligand_physchem_properties",
+      "bb:n_tables": 1,
+      "bb:n_rows": 11151,
+      "bb:manifest": "brick/ligand_physchem_properties.dataset.jsonld"
+    },
+    {
+      "@type": "dcat:Dataset",
+      "@id": "urn:bb:guide-to-pharmacology:ligands",
+      "dcterms:identifier": "ligands",
+      "dcterms:title": "ligands",
+      "bb:n_tables": 1,
+      "bb:n_rows": 13856,
+      "bb:manifest": "brick/ligands.dataset.jsonld"
+    },
+    {
+      "@type": "dcat:Dataset",
+      "@id": "urn:bb:guide-to-pharmacology:peptides",
+      "dcterms:identifier": "peptides",
+      "dcterms:title": "peptides",
+      "bb:n_tables": 1,
+      "bb:n_rows": 2452,
+      "bb:manifest": "brick/peptides.dataset.jsonld"
+    },
+    {
+      "@type": "dcat:Dataset",
+      "@id": "urn:bb:guide-to-pharmacology:targets_and_families",
+      "dcterms:identifier": "targets_and_families",
+      "dcterms:title": "targets_and_families",
+      "bb:n_tables": 1,
+      "bb:n_rows": 3383,
+      "bb:manifest": "brick/targets_and_families.dataset.jsonld"
+    }
+  ]
+}

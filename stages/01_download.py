@@ -3,7 +3,7 @@
 Download Guide to PHARMACOLOGY (GtoPdb) data.
 Source: https://www.guidetopharmacology.org/
 License: CC BY-SA 4.0
-Version: 2025.4
+Version: 2026.2
 """
 
 from pathlib import Path
